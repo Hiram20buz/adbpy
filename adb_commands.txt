@@ -1,0 +1,11 @@
+adb devices
+adb shell input keyevent 84
+adb shell input keyevent 44
+adb shell input keyevent 53
+adb shell input keyevent 66
+adb shell screencap -p /sdcard/screenshot.png
+adb pull /sdcard/screenshot.png /Users/rxs0523/adbpy/code
+adb shell screenrecord --time-limit 60 /sdcard/screen.mp4
+adb pull /sdcard/screen.mp4 /Users/rxs0523/adbpy/code
+adb shell cmd connectivity airplane-mode enable
+adb shell cmd connectivity airplane-mode disable 
